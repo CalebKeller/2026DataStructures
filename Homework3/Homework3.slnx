@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Homework3.ConsoleUI/Homework3.ConsoleUI.csproj" />
+  <Project Path="Homework3.Logic/Homework3.Logic.csproj" />
+  <Project Path="Homework3.Tests/Homework3.Tests.csproj" />
+  <Project Path="Homework3.WebUI/Homework3.WebUI.csproj" />
+</Solution>
