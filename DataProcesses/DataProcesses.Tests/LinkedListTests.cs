@@ -60,8 +60,10 @@ public class LinkedListTests
         sortedLinkedList.BinaryList().ShouldBe(13);
     }
 
-    [Fact]
-    public void ReverseAlternateKTest()
+    [Theory]
+    [InlineData(3, "|| 3 || 2 || 1 || 4 || 5 ||")]
+    [InlineData(2, "|| 2 || 1 || 3 || 4 || 5 ||")]
+    public void ReverseAlternateKTest(int k, string expectedOrder)
     {
         Linked_List altKList = new Linked_List(1);
         altKList.Append(2);
@@ -69,10 +71,9 @@ public class LinkedListTests
         altKList.Append(4);
         altKList.Append(5);
 
-        altKList.ReverseAlternateK(3);
+        altKList.ReverseAlternateK(k);
         
-        altKList.PrintList().ShouldBe("||  ||");
-        altKList.BinaryList().ShouldBe(13);
+        altKList.PrintList().ShouldBe(expectedOrder);
     }
 }
 
