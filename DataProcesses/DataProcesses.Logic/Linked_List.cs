@@ -1,4 +1,4 @@
-namespace Homework3.Logic;
+namespace DataProcesses.Logic;
 
 // Orginal Code from professor, edits by Caleb Keller
 public class Linked_List
@@ -26,7 +26,7 @@ public class Linked_List
     {
         return length;
     }
-    public string PrintList()
+    public string PrintList() // Altered to fit into multiple froject solution.
     {
         Node temp = head;
         string text = "|";
@@ -37,7 +37,7 @@ public class Linked_List
         }
         return text + "|";
     }
-    public string ReturnAll()
+    public string ReturnAll() // Altered to fit into multiple froject solution.
     {
         string text = string.Empty;
         if (length == 0)
@@ -68,7 +68,7 @@ public class Linked_List
         length = 0;
     }
 
-    /* PROBLEM 1 
+    /* --- Either HW1 or HW2 --- PROBLEM 1 
     First, if there is no elements or only one element, the LinkedList is left unchanged and the code ends. 
     Next, the current node is tracked from the 'head' and it will run as many times as there are elements (at most).  
     Then, it will end if the pointer to the next value is null, if not, it will check if the next two values are duplicates. 
@@ -101,8 +101,8 @@ public class Linked_List
             }
         }
     }
-    // The time complexity is O(n), because it can run n times at the most. The loop's max times to run is the length of the LinkedList
-    // The space complexity is O(1), because it only stores one variable inside the loop.
+    //  --- Either HW1 or HW2 --- The time complexity is O(n), because it can run n times at the most. The loop's max times to run is the length of the LinkedList
+    //  --- Either HW1 or HW2 --- The space complexity is O(1), because it only stores one variable inside the loop.
 
     public void Append(int value)
     {
@@ -221,7 +221,7 @@ public class Linked_List
         length--;
         return temp;
     }
-    public void Reverse()
+    public void Reverse()  // --- Either HW1 or HW2 --- 
     {
         Node temp = head;
         head = tail;
@@ -317,5 +317,9 @@ public class Linked_List
 
 
 }
+
+
+
+
 
 

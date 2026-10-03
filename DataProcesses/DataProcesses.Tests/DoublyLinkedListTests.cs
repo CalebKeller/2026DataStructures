@@ -1,7 +1,4 @@
-﻿using Homework3.Logic;
-using Shouldly;
-
-namespace Homework3.Tests;
+﻿namespace DataProcesses.Tests;
 
 public class DoublyLinkedListTests
 {
@@ -37,3 +34,5 @@ public class DoublyLinkedListTests
         doublyLinkedList.PrintList().ShouldBe("|| 5 || 2 || 4 || 8 || 13 || 7 ||");
     }
 }
+
+

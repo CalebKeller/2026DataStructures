@@ -1,7 +1,7 @@
-﻿using System.Runtime.CompilerServices;
-using System.Transactions;
+﻿namespace DataProcesses.Logic;
 
-namespace Homework3.Logic;
+using System.Runtime.CompilerServices;
+using System.Transactions;
 
 public class DoublyLinkedList
 {
@@ -57,7 +57,8 @@ public class DoublyLinkedList
     }
 
     /*
-        First, it checks if the head is null (empty list) or if the list is so short it cab't be reversed. If so, it doesn't execute the code below.
+        ----- HW 3 -----
+        First, "Reverse" checks if the head is null (empty list) or if the list is so short it cab't be reversed. If so, it doesn't execute the code below.
         Next, the head is stored in current. Then, while current is an actual node, a certain block runs. 
         The next Node is stored in temp and the next and previous node pointer switch. 
         Then current goes to temp, which is the next iteration. This repeats until nearly everything but the head and tail are reversed.
@@ -84,13 +85,15 @@ public class DoublyLinkedList
         head = tail;
         tail = oldHead;
     }
-    // The time complexity can only be as long as current is not null, therefore it is the length of the list of O(n). 
-    // The only initialized value inside the loop is temp, which holds one node, so the space complexity is O(1).
+    // ----- HW 3 ----- The time complexity can only be as long as current is not null, therefore it is the length of the list of O(n). 
+    // ----- HW 3 ----- The only initialized value inside the loop is temp, which holds one node, so the space complexity is O(1).
 
+
+    // Unfortunately unfinished...
     public void PartitionList(int x)
     {
 
-        /*
+        /* ----- HW 3 -----
         Node dummy = new Node(0);
         Node dummy2 = new Node(0);
         
@@ -135,5 +138,9 @@ public class DoublyLinkedList
         }
     }
 }
+
+
+
+
 
 

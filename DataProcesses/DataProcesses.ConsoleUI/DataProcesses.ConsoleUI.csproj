@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Homework3.Logic\Homework3.Logic.csproj" />
+    <ProjectReference Include="..\DataProcesses.Logic\DataProcesses.Logic.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

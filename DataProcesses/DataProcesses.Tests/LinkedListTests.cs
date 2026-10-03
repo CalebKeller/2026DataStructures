@@ -1,6 +1,4 @@
-using Homework3.Logic;
-
-namespace Homework3.Tests;
+namespace DataProcesses.Tests;
 
 public class LinkedListTests
 {
@@ -77,3 +75,5 @@ public class LinkedListTests
         altKList.BinaryList().ShouldBe(13);
     }
 }
+
+

@@ -1,4 +1,4 @@
-using Homework3.WebUI.Components;
+using DataProcesses.WebUI.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 

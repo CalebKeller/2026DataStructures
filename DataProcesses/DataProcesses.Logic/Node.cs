@@ -1,4 +1,4 @@
-namespace Homework3.Logic;
+namespace DataProcesses.Logic;
 
 public class Node
 {
@@ -11,5 +11,6 @@ public class Node
         Val = value;
     }
 }
+
 
 

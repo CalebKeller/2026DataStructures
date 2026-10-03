@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Homework3.Logic\Homework3.Logic.csproj" />
+    <ProjectReference Include="..\DataProcesses.Logic\DataProcesses.Logic.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DataProcesses.ConsoleUI/DataProcesses.ConsoleUI.csproj" />
+  <Project Path="DataProcesses.Logic/DataProcesses.Logic.csproj" />
+  <Project Path="DataProcesses.Tests/DataProcesses.Tests.csproj" />
+  <Project Path="DataProcesses.WebUI/DataProcesses.WebUI.csproj" />
+</Solution>
