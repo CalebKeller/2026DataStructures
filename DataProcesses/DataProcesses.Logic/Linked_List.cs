@@ -221,7 +221,7 @@ public class Linked_List
         length--;
         return temp;
     }
-    public void Reverse()  // --- Either HW1 or HW2 --- 
+    public void Reverse()  // --- Either HW1 or HW2 ---
     {
         Node temp = head;
         head = tail;
@@ -237,6 +237,10 @@ public class Linked_List
         }
     }
 
+    // LeetCode Practice- Difficulty Medium | Problem 1
+    /*
+
+    */
     public void ReverseAlternateK(int k)
     {
         if (length == 0 || (tail.Val == head.Val && head.Val <= tail.Val))
@@ -266,7 +270,8 @@ public class Linked_List
         head.Next = temp2;
         head = originalHead;
     }
-    // Floyd's Tortoise and Hare algorithm
+
+    // Floyd's Tortoise and Hare algorithm (Made by Proffesor)
     public Node FindMiddleNode()
     {
         if (head == null) return null;
@@ -280,7 +285,7 @@ public class Linked_List
         return slow;
     }
 
-    /* PROBLEM 2
+    /* PROBLEM 2 (--- HW 1 or HW 2 ---)
     As the LinkedList is iterated the if statement makes sure the LinkedList is binary, if it isn't, it returns 0. 
     It also multiplies the current total by two and adds the current value of the node and then moves to the next one.
     By multiplying by two and adding the value, it ensures that the binary value moves up one digit and also increments by the next one.

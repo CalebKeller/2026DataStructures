@@ -60,6 +60,7 @@ public class LinkedListTests
         sortedLinkedList.BinaryList().ShouldBe(13);
     }
 
+    
     [Theory]
     [InlineData(3, "|| 3 || 2 || 1 || 4 || 5 ||")]
     [InlineData(2, "|| 2 || 1 || 3 || 4 || 5 ||")]
