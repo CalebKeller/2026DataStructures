@@ -101,8 +101,9 @@ public class Linked_List
             }
         }
     }
-    //  --- Either HW1 or HW2 --- The time complexity is O(n), because it can run n times at the most. The loop's max times to run is the length of the LinkedList
-    //  --- Either HW1 or HW2 --- The space complexity is O(1), because it only stores one variable inside the loop.
+    //  --- Either HW1 or HW2: The time complexity is O(n), because it can run n times at the most. The loop's max times to run is the length of the LinkedList
+    //  --- Either HW1 or HW2: The space complexity is O(1), because it only stores one variable inside the loop.
+
 
     public void Append(int value)
     {
@@ -243,7 +244,7 @@ public class Linked_List
     */
     public void ReverseAlternateK(int k)
     {
-        if (length == 0 || (tail.Val == head.Val && head.Val <= tail.Val))
+        if (length == 0 || tail.Val == head.Val)
         {
             return;
         }
@@ -253,22 +254,21 @@ public class Linked_List
         {
             temp = temp.Next;
         }
+        Node headBackup = temp;
         Node temp2 = temp.Next;
-        temp.Next = null;
-        Node originalHead = head;
         Node prev = head;
-
-        for (int i = 0; i < length; i++)
+        temp.Next = null;
+        while (prev.Val != temp.Val)
         {
-            while(prev != temp)
-            {
-                prev = prev.Next;
-                temp.Next = prev;
-                temp = prev;
-            }
+            prev = prev.Next;
+            temp.Next = prev;
+            temp = prev;
         }
+        //tail.Next = temp2;
+        //tail = temp2;
         head.Next = temp2;
-        head = originalHead;
+        head = headBackup;
+        //tail.Next = null;
     }
 
     // Floyd's Tortoise and Hare algorithm (Made by Proffesor)

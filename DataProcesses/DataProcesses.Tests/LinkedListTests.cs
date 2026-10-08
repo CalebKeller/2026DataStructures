@@ -60,10 +60,10 @@ public class LinkedListTests
         sortedLinkedList.BinaryList().ShouldBe(13);
     }
 
-    
+    // LeetCode Practice- Difficulty Medium
     [Theory]
-    [InlineData(3, "|| 3 || 2 || 1 || 4 || 5 ||")]
-    [InlineData(2, "|| 2 || 1 || 3 || 4 || 5 ||")]
+    [InlineData(3, "|| 3 || 2 || 1 || 4 || 5 || 6 || 8 || 7 ||")]
+    [InlineData(2, "|| 2 || 1 || 3 || 4 || 6 || 5 || 7 || 8 ||")]
     public void ReverseAlternateKTest(int k, string expectedOrder)
     {
         Linked_List altKList = new Linked_List(1);
@@ -71,6 +71,9 @@ public class LinkedListTests
         altKList.Append(3);
         altKList.Append(4);
         altKList.Append(5);
+        altKList.Append(6);
+        altKList.Append(7);
+        altKList.Append(8);
 
         altKList.ReverseAlternateK(k);
         
