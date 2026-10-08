@@ -26,7 +26,7 @@ public class Linked_List
     {
         return length;
     }
-    public string PrintList() // Altered to fit into multiple froject solution.
+    public string PrintList() // Altered to fit into multiple project solution.
     {
         Node temp = head;
         string text = "|";
@@ -37,7 +37,7 @@ public class Linked_List
         }
         return text + "|";
     }
-    public string ReturnAll() // Altered to fit into multiple froject solution.
+    public string ReturnAll() // Altered to fit into multiple project solution.
     {
         string text = string.Empty;
         if (length == 0)
