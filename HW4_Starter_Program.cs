@@ -4,6 +4,7 @@
 // Do not change the tests in Main. Run with: dotnet run
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 public class Program
 {
@@ -73,7 +74,31 @@ public class Program
     {
         string[] words = text.ToLower().Split(' ');
         // TODO: count each word with a Dictionary<string, int>, then find the biggest count
-        return ("", 0);
+
+        Dictionary<string, int> dict = new Dictionary<string, int>();
+        string nextWord = "";
+        string mostCommonWord = "";
+        int maxCount = 0;
+        for (int i = 0; i < words.Length; i++)
+        {
+            string temp = words[i] ?? "";
+            if(temp == nextWord)
+            {
+                dict[words[i]]++;
+            }
+            else
+            {
+                dict.Add(words[i], 1);
+            }
+            nextWord = words[i] ?? "";
+            var temp2 = dict[nextWord] ?? 0;
+            if(temp2 > maxCount)
+            {
+                maxCount = temp2;
+                mostCommonWord = nextWord;
+            }
+        }
+        return (mostCommonWord, maxCount);
     }
 
     // B3: Return the names that are on BOTH lists. Use a HashSet.
