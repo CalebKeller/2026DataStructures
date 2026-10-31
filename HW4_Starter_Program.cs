@@ -74,7 +74,7 @@ public class Program
     {
         string[] words = text.ToLower().Split(' ');
         // TODO: count each word with a Dictionary<string, int>, then find the biggest count
-
+        /*
         Dictionary<string, int> dict = new Dictionary<string, int>();
         string nextWord = "";
         string mostCommonWord = "";
@@ -98,7 +98,10 @@ public class Program
                 mostCommonWord = nextWord;
             }
         }
+
         return (mostCommonWord, maxCount);
+        */
+        return("", 0);
     }
 
     // B3: Return the names that are on BOTH lists. Use a HashSet.
