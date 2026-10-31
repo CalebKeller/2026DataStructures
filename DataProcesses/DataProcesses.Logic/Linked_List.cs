@@ -319,8 +319,6 @@ public class Linked_List
     }
     // The Big O (time complexity) for this one is O(n), because it will run n times (n is the length in this case and that is how many times the loop is set to run)
     // The Big O for the space complexity is O(2), total and current being stored, 2 is a constant, so it simplifies to O(1).
-
-
 }
 
 
