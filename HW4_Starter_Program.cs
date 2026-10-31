@@ -136,9 +136,11 @@ public class HashTable
     // TODO: return true if the key is in the table, false if not.
     public bool ContainsKey(string key)
     {
-        for(int i=0; i<size; i++)
+        Node? temp = dataMap[Hash(key)];
+        while (temp != null)
         {
-            
+            if (temp.Key.Equals(key)) return true;
+            temp = temp.Next;
         }
         return false;
     }
