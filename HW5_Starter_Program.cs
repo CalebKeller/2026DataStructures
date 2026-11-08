@@ -113,28 +113,37 @@ public class BinarySearchTree
    assignment page.
 
    ---- Question 1 ----
-   a) root:
-   b) leaves:
-   c) internal nodes:
-   d) parent of 35:            sibling of 20:
-   e) depth of 35:             height of node 30:
-   f) height of tree:          size:
-   g) degree of 70:
-   h) valid BST? why:
+   a) root: 50
+   b) leaves: 20, 35, 45, 80
+   c) internal nodes: 30, 70, 40
+   d) parent of 35: 40           sibling of 20: 40
+   e) depth of 35:             height of node 30: h=2
+   f) height of tree:  h=3        size: 8 Nodes
+   g) degree of 70: 1
+   h) valid BST? why: Yes, 20 is less than 30, which is on the left. 40 is on the right and is greater than 30 on the right. 
+            40's children are 35 on the left and 45 on the right. It is valid for these reasons.
 
    ---- Question 2 ----   (Yes / No)
-                 Tree A    Tree B    Tree C
-   Full?
-   Perfect?
-   Complete?
-   Reasons for each No:
+                            Tree A    Tree B    Tree C
+   Full?                       Y        Y         Y
+   Perfect?                    N        Y         N
+   Complete?                   Y        Y         N
+   Reasons for each No: Tree A is not perfect since the 12 does not have two children. 
+   Tree C is not Perfect since 4 doesn't hace two children. Tree C is not complete because at the far left under 4, there is a gap.
 
    ---- Question 3 ----
    a) tree:
+                    41
+                  /     \
+                 20      65          
+                /  \    /  \
+               11  29  50   91
+                    \       /  \
+                    32     72  99 
 
-   b) height:                  number of leaves:
-   c) Contains(32) visits:              returns:
-      Contains(60) visits:              returns:
+   b) height: 3                 number of leaves: 5
+   c) Contains(32) visits: 41, 20, 29, 32             returns: true
+      Contains(60) visits: 41, 65, 50                 returns: false
 
    ---- Question 4 ----
    a) tree:
