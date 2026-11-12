@@ -163,22 +163,25 @@ public class BinarySearchTree
 
    ---- Question 1: BFS by hand ----
       Step   Take out   Queue after adding children   Results
-      Start             [52]                          [ ]
-      1
-      2
-      3
-      4
-      5
+      Start              [52]                          [ ]
+      1        52        [30, 75]                      [52]
+      2        30        [75, 18, 40]                  [82]              
+      3        75        [18, 40, 60, 90]              [157]
+      4        18        [40, 60, 90]                  [175]
+      5        40        [40, 60, 90, 35]              [215]
    Full BFS result:
 
    ---- Question 2: DFS by hand ----
    Preorder:
+   [52, 30, 18, 40, 35, 75, 60, 66, 90]
    Inorder:
+   [18, 30, 40, 35, 52, 60, 66, 75, 90]
    Postorder:
+   [35, 18, 40, 30, 66, 60, 90, 75, 52]
 
    ---- Question 3: Pick the traversal ----
-   a)
-   b)
-   c)
-   d)
+   a) Inorder
+   b) BFS
+   c) Postorder
+   d) Preorder
 */
