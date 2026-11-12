@@ -174,8 +174,21 @@ public class BinarySearchTree
         Node node = root;
         int h(Node? n)
         {
-            if (n == null) return -1;
-            return 0;
+            if (root == null)
+            {
+                return -1;
+            }
+            else if(n.Left != null)
+            {
+                height++;
+                h(n.Left);
+            }
+            else if(n.Right != null)
+            {
+                height++;
+                h(n.Right);
+            }
+            return height;
         }
         height = h(root);
         return height;
