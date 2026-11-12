@@ -171,21 +171,20 @@ public class BinarySearchTree
     public int Height()
     {
         int height = 0;
+        if (root == null)
+        {
+            return -1;
+        }
         Node node = root;
         int h(Node? n)
         {
-            if (root == null)
+            if(n.Left != null || n.Right != null) height++;
+            if (n.Left != null)
             {
-                return -1;
-            }
-            else if(n.Left != null)
-            {
-                height++;
                 h(n.Left);
             }
-            else if(n.Right != null)
+            if (n.Right != null)
             {
-                height++;
                 h(n.Right);
             }
             return height;
