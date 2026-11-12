@@ -132,7 +132,6 @@ public class BinarySearchTree
     //       Use a queue, the same way BFS does. An empty tree has 0 leaves.
     public int CountLeaves()
     {
-        var results = new List<int>();
         int leavesCount = 0;
         if (root == null) return 0;
         var queue = new Queue<Node>();
@@ -140,7 +139,6 @@ public class BinarySearchTree
         while (queue.Count > 0)
         {
             Node currentNode = queue.Dequeue();
-            results.Add(currentNode.Value);
             if(currentNode.Left == null && currentNode.Right == null)
             {
                 leavesCount++;
@@ -148,8 +146,7 @@ public class BinarySearchTree
             if (currentNode.Left != null) queue.Enqueue(currentNode.Left);
             if (currentNode.Right != null) queue.Enqueue(currentNode.Right);
         }
-        //return results;
-        return 0;
+        return leavesCount;
     }
 
     // TODO: return the total of all values in the tree. An empty tree returns 0.
