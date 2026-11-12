@@ -170,7 +170,6 @@ public class BinarySearchTree
     //       Hint: write a local function int H(Node? n) that returns -1 when n is null.
     public int Height()
     {
-        int height = 0;
         if (root == null)
         {
             return -1;
@@ -178,19 +177,26 @@ public class BinarySearchTree
         Node node = root;
         int h(Node? n)
         {
-            if(n.Left != null || n.Right != null) height++;
+            int leftHeight = 0;
+            int rigthHeight = 0;
             if (n.Left != null)
             {
-                h(n.Left);
+                leftHeight = h(n.Left);
             }
             if (n.Right != null)
             {
-                h(n.Right);
+                rigthHeight = h(n.Right);
             }
-            return height;
+            if(n.Value != root.Value)
+            {
+                return 1 + Math.Max(rigthHeight, leftHeight);
+            }
+            else
+            {
+                return Math.Max(rigthHeight, leftHeight);
+            }
         }
-        height = h(root);
-        return height;
+        return h(root);
     }
 
     // TODO: return true if the tree follows the BST rule, false if not.
