@@ -4,6 +4,7 @@
 // Do not change the tests in Main. Run with: dotnet run
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 public class Program
 {
@@ -139,7 +140,7 @@ public class BinarySearchTree
         while (queue.Count > 0)
         {
             Node currentNode = queue.Dequeue();
-            if(currentNode.Left == null && currentNode.Right == null)
+            if (currentNode.Left == null && currentNode.Right == null)
             {
                 leavesCount++;
             }
@@ -153,7 +154,15 @@ public class BinarySearchTree
     //       Use DFS: a Traverse local function, like DFSInOrder.
     public int Sum()
     {
-        return 0;
+        int totalValue = 0;
+        void Traverse(Node cn)
+        {
+            if (cn.Left != null) Traverse(cn.Left);
+            totalValue += cn.Value;
+            if (cn.Right != null) Traverse(cn.Right);
+        }
+        if (root != null) Traverse(root);
+        return totalValue;
     }
 
     // TODO: return the height of the tree. Empty tree = -1. One node = 0.
@@ -161,7 +170,15 @@ public class BinarySearchTree
     //       Hint: write a local function int H(Node? n) that returns -1 when n is null.
     public int Height()
     {
-        return 0;
+        int height = 0;
+        Node node = root;
+        int h(Node? n)
+        {
+            if (n == null) return -1;
+            return 0;
+        }
+        height = h(root);
+        return height;
     }
 
     // TODO: return true if the tree follows the BST rule, false if not.
@@ -169,7 +186,15 @@ public class BinarySearchTree
     //       is bigger than the number before it.
     public bool IsValidBST()
     {
-        return false;
+        var listing = DFSInOrder();
+        for (int i = 1; i < listing.Count; i++)
+        {
+            if (listing[i - 1] > listing[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
