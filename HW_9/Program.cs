@@ -37,4 +37,14 @@ public static class Main
         5: 1
         total: 14, which is 2*E
 
+    A4.
+          |   Vertex Taken Out    |   Added to Queue    |   Queue After Change  |   
+        0 |          _            |         0           |          [0]          |
+        1 |          0            |        1, 4         |        [1, 4]         |
+        2 |          1            |                     |                       |
+        3 |                       |                     |                       |
+        4 |                       |                     |                       |
+        5 |                       |                     |                       |
+        6 |                       |                     |                       |
+
 */
