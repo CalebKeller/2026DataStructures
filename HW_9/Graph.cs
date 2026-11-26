@@ -50,7 +50,15 @@ public class Graph
     }
     public void RemoveVertex(int v)
     {
-
+        if(Adjacence.ContainsKey(v))
+        {
+            List<int> neighbors = Adjacence[v];
+            foreach(int neighbor in neighbors)
+            {
+                Adjacence[neighbor].Remove(v);
+            }
+            Adjacence.Remove(v);
+        }
     }
     public void Print()
     {
