@@ -1,7 +1,7 @@
 
 public class Graph
 {
-    public Dictionary<int, List<int>> UndirectedGraph { get; private set; }
+    public Dictionary<int, List<int>> Adjacence { get; private set; }
 
     public Graph()
     {
@@ -10,14 +10,34 @@ public class Graph
 
     public void AddVertex(int v)
     {
-
+        if (!Adjacence.ContainsKey(v))
+        {
+            Adjacence[v] = new List<int>();
+        }
     }
     public void AddEdge(int u, int v)
     {
+        if (!Adjacence.ContainsKey(u))
+        {
+            AddVertex(u);
+        }
+        if (!Adjacence.ContainsKey(v))
+        {
+            AddVertex(v);
+        }
+        if(!HasEdge(u, v))
+        {
+            Adjacence[u].Add(v);
+            Adjacence[v].Add(u);
+        }
 
     }
     public bool HasEdge(int u, int v)
     {
+        if(Adjacence[u].Contains(v) && Adjacence[v].Contains[u])
+        {
+            return true;
+        }
         return false;
     }
     public void RemoveVertex(int v)
