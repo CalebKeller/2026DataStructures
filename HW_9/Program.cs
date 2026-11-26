@@ -1,11 +1,24 @@
-namespace HW_9;
+
 public static class Main
 {
-    public static void Main
+    public static void Main()
     {
+        Graph newGraph = new Graph();
 
+        newGraph.AddEdge(0, 1);
+        newGraph.AddEdge(1, 2);
+        newGraph.AddEdge(0, 3);
+        newGraph.AddEdge(3, 4);
+        newGraph.AddEdge(1, 4);
+        newGraph.AddEdge(6, 7);
+        newGraph.AddEdge(4, 6);
+        newGraph.AddEdge(2, 5);
+        newGraph.AddEdge(4, 5);
+        newGraph.AddVertex(8);
     }
 }
+
+
 
 /*
 
@@ -83,3 +96,4 @@ A1-A9, Answers
         For an adjacency list on the other hand, it only has O(V+E) memory, meaning
         it has 310,000 in memory. Therefore, it should use an adjacency list.
 */
+
