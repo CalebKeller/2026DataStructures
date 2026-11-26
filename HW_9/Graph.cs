@@ -25,7 +25,7 @@ public class Graph
         {
             AddVertex(v);
         }
-        if(!HasEdge(u, v))
+        if (!HasEdge(u, v))
         {
             Adjacence[u].Add(v);
             Adjacence[v].Add(u);
@@ -34,7 +34,7 @@ public class Graph
     }
     public bool HasEdge(int u, int v)
     {
-        if(Adjacence[u].Contains(v) && Adjacence[v].Contains[u])
+        if (Adjacence[u].Contains(v) && Adjacence[v].Contains[u])
         {
             return true;
         }
@@ -42,7 +42,7 @@ public class Graph
     }
     public void RemoveEdge(int u, int v)
     {
-        if(Adjacence.ContainsKey(u) && Adjacence.ContainsKey(v) && HasEdge(u, v))
+        if (Adjacence.ContainsKey(u) && Adjacence.ContainsKey(v) && HasEdge(u, v))
         {
             Adjacence[u].Remove(v);
             Adjacence[v].Remove(u);
@@ -50,10 +50,10 @@ public class Graph
     }
     public void RemoveVertex(int v)
     {
-        if(Adjacence.ContainsKey(v))
+        if (Adjacence.ContainsKey(v))
         {
             List<int> neighbors = Adjacence[v];
-            foreach(int neighbor in neighbors)
+            foreach (int neighbor in neighbors)
             {
                 Adjacence[neighbor].Remove(v);
             }
@@ -62,16 +62,49 @@ public class Graph
     }
     public void Print()
     {
-        
+
     }
     public List<int> BFS(int start)
     {
-        return [];
+        List<int> order = new List<int>();
+        HashSet<int> visited = new HashSet<int>();
+        Queue<int> queue = new Queue<int>();
+        visited.Add(start);
+        queue.Enqueue(start);
+        while (queue.Count > 0)
+        {
+            int current = queue.Dequeue();
+            order.Add(current);
+            foreach (int next in Adjacence[current])
+            {
+                if (!visited.Contains(next))
+                {
+                    visited.Add(next);
+                    queue.Enqueue(next);
+                }
+            }
+        }
+        return order;
     }
     public List<int> DFS(int start)
     {
-        return [];
+        List<int> order = new List<int>();
+        HashSet<int> visited = new HashSet<int>();
+        DFSVisit(start, visited, order);
+        return order;
+        void DFSVisit(int current,
+        HashSet<int> visited, List<int> order)
+        {
+            visited.Add(current);
+            order.Add(current);
+            foreach (int next in adj[current])
+            {
+                if (!visited.Contains(next))
+                    DFSVisit(next, visited, order);
+            }
+        }
     }
+
     public List<int> ShortestPath(int from, int to)
     {
         return [];
