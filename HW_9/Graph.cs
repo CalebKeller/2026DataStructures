@@ -40,9 +40,21 @@ public class Graph
         }
         return false;
     }
+    public void RemoveEdge(int u, int v)
+    {
+        if(Adjacence.ContainsKey(u) && Adjacence.ContainsKey(v) && HasEdge(u, v))
+        {
+            Adjacence[u].Remove(v);
+            Adjacence[v].Remove(u);
+        }
+    }
     public void RemoveVertex(int v)
     {
 
+    }
+    public void Print()
+    {
+        
     }
     public List<int> BFS(int start)
     {
